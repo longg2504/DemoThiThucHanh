@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">
+        Bài 2: tìm vị trí của phần tử trong mảng 
+    </label>
+    <button onclick="findIndex(9,arr)">Giải</button>
+
+
+    <script>
+        let arr = [1,2,7,9,5,8,6]
+        function findIndex(x,arr){
+            let index = 0;
+            for(let i = 0 ; i<arr.length ; i++){
+
+                if(x == arr[i]) {
+                    document.write(`${x} có trong mảng `);
+                    document.write('</br>')
+                    document.write(`${x} ở vị trí thứ ${index}`)
+                    break;
+                }
+                index++;
+            }
+        }
+        
+    </script>
+</body>
+</html>

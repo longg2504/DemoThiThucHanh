@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">
+        Bài 1: Giải phương trình bậc 2 a = 8 , b = 12 , c = -20.
+    </label>
+    <button onclick="tinhbac2(8,12,-20)">Giải</button>
+    <script>
+      function tinhbac2(a,b,c) {
+        // let a = +prompt("nhập hệ số a");
+        // let b = +prompt("nhập hệ số b");
+        // let c = +prompt("nhập hệ số c");
+
+        if (a == 0) {
+          if (b == 0) {
+            if (c == 0) {
+              document.write("phương trình có vô số nghiệm");
+            } else {
+              document.write("phương trình vô nghiệm");
+            }
+          } else {
+            let x = -c / b;
+            document.write("phương trình có nghiệm duy nhất là " + x);
+          }
+        } else {
+          let d;
+          d = Math.pow(b, 2) - 4 * a * c;
+          if (d < 0) {
+            document.write("Phương trình vô nghiệm");
+          } else if (d == 0) {
+            let y = -b / (2 * a);
+            document.write("phương trình có nghiệm kép là " + y);
+          } else {
+            let z1, z2;
+            z1 = (-b + Math.sqrt(d)) / (2 * a);
+            z2 = (-b - Math.sqrt(d)) / (2 * a);
+            document.write(
+              "phương trình có 2 nghiệm phân biệt là x1 =  " +
+                z1 +
+                " và x2 = " +
+                z2
+            );
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

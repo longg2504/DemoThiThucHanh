@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        class Staff {
+            constructor(fullname , email) {
+                this.fullname = fullname;
+                this.email = email;
+            }
+            setFullname(fullname){
+                this.fullname = fullname;
+            }
+            getFullname(){
+                return this.fullname;
+            }
+            setEmail(email){
+                this.email = email;
+            }
+            getEmail(){
+                return this.email;
+            }
+            toString() {
+                document.write( `Tên của nhân viên ${this.fullname} </br> Email của nhân viên ${this.email}`);
+                document.write('</br>');
+            }
+        }
+
+
+        let Staffs = [
+            new Staff("David" , "david@gmail.com"),
+            new Staff("Taylor" , "Taylor11@gmail.com"),
+            new Staff("Edward" , "edward12@gmail.com"),
+
+        ]
+
+        
+
+
+
+
+        let david = new Staff('David','david@gmail.com');
+        document.write(david);
+        david.setFullname("David Do");
+        david.setEmail("david.do@gmail.com");
+        // document.write(david);
+        document.write("</br>");
+        document.write("</br>");
+        david.toString();
+        document.write("</br>");
+        document.write("</br>"); 
+        document.write("</br>");
+
+
+
+        for(let i = 0 ; i<Staffs.length ; i++){
+            Staffs[i].toString();
+        }
+    </script>
+</body>
+</html>
